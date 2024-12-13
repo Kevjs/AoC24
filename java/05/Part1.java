@@ -45,12 +45,10 @@ class Updates implements Addable {
     }
 
     public int correctUpdates(Rules currentRules) {
-        int totalCorrect = 0;
         int total = 0;
 
         for (Update update : updates) {
             if (update.isCorrect(currentRules)) {
-                totalCorrect++;
                 total += update.getMiddle();
             }
         }
